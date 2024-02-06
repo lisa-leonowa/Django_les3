@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление заказа</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    Подтвердите удаление
+    <input type = "submit" value="Да">
+    <a href='/orders'>Нет</a>
+</form>
+</body>
+</html>
