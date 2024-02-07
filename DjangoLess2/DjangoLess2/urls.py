@@ -25,6 +25,8 @@ urlpatterns = [
     path('clients', views.read_client),
     path('clients/create', views.create_client),
     path('clients/<int:id>/', views.client_detail_view),
+    path('clients/<int:id>/orders', views.client_orders),
+    path('clients/<int:id_client>/goods', views.client_goods),
 
     path('goods', views.read_good),
     path('goods/create', views.create_good),
