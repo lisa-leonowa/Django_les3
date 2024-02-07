@@ -33,3 +33,10 @@ class OrderModel(models.Model):
 
     def __str__(self):
         return f'Заказ: {self.id_client}, стоимость-{self.total_price}'
+
+    def order_good(self, id_good):
+        good = GoodModel.objects.get(id=id_good.id)
+        return f'Заказ: {self.id_client}, стоимость-{self.total_price}\n' \
+               f'Состав заказа:\n' \
+               f'Товар {good.name} (Описание: {good.description})'
+
