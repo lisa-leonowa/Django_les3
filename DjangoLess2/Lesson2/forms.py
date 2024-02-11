@@ -1,4 +1,4 @@
-from .models import ClientModel, GoodModel, OrderModel
+from .models import ClientModel, GoodModel, OrderModel, OrderListModel
 from django.forms import ModelForm
 
 
@@ -17,4 +17,10 @@ class GoodForm(ModelForm):
 class OrderForm(ModelForm):
     class Meta:
         model = OrderModel
-        fields = ('id_client', 'id_good', 'total_price')
+        fields = ('id_client',)
+
+
+class OrderListForm(ModelForm):
+    class Meta:
+        model = OrderListModel
+        fields = ('id_good', 'id_order', 'count')
