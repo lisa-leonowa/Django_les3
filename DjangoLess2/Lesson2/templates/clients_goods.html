@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,4 +25,32 @@
     {{ i }} <br>
 {% endfor %}
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары клиента</title>
+</head>
+<body>
+<h1>Товары клиента</h1>
+<br>
+<h2>Товары за последние 7 дней (неделю)</h2>
+{% for i in data_7 %}
+    {{ i }} <br>
+{% endfor %}
+
+<br>
+<h2>Товары за последние 30 дней (месяц)</h2>
+{% for i in data_30 %}
+    {{ i }} <br>
+{% endfor %}
+
+<br>
+<h2>Товары за последние 365 дней (год)</h2>
+{% for i in data_365 %}
+    {{ i }} <br>
+{% endfor %}
+</body>
+>>>>>>> origin/master
 </html>
