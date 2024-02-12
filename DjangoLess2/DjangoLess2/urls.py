@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Lesson2 import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,4 +38,4 @@ urlpatterns = [
     path('orders/create/order_list', views.create_order_list),
     path('orders/create', views.create_order),
     path('orders/delete/<int:id>/', views.delete_order),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

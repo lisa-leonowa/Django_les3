@@ -82,12 +82,14 @@ def read_good(request):
 
 def create_good(request):
     if request.method == 'POST':
-        form = GoodForm(request.POST)
+        form = GoodForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            form.save()  # картинка сохраняется в папку Django_less2/DjangoLess2/media
             return redirect('/goods')
+        else:
+            return render(request, 'create_good.html', context={'form': GoodForm})
     else:
-        return render(request, 'create.html', context={'form': GoodForm})
+        return render(request, 'create_good.html', context={'form': GoodForm})
 
 
 def update_good(request, id):

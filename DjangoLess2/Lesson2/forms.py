@@ -11,7 +11,7 @@ class ClientForm(ModelForm):
 class GoodForm(ModelForm):
     class Meta:
         model = GoodModel
-        fields = ('name', 'description', 'price_good', 'quantity_good')
+        fields = ('name', 'description', 'price_good', 'quantity_good', 'image')
 
 
 class OrderForm(ModelForm):

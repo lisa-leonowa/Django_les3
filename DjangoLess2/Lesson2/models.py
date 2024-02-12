@@ -20,6 +20,7 @@ class GoodModel(models.Model):
     price_good = models.IntegerField(default=1)
     quantity_good = models.IntegerField()
     date_add = models.DateField(default=str(datetime.datetime.now()).split()[0])
+    image = models.ImageField(upload_to='images/', null=True)
 
     def __str__(self):
         return f'Товар {self.name}, описание-{self.description}, стоимость-{self.price_good}'
